@@ -1,0 +1,15 @@
+logging:
+    level:
+        root: 'off'
+
+spring:
+    application:
+        name: 'simple-shell'
+    main:
+        banner-mode: 'off'
+        web-application-type: 'NONE'
+    shell:
+        history:
+            enabled: 'false'
+        script:
+            enabled: 'false'

@@ -10,9 +10,8 @@
   </parent>
   <groupId>dev.dashaun.cli</groupId>
   <artifactId>simple</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>simple</name>
-  <description>Demo project for Spring Boot</description>
+  <version>0</version>
+  <name>${project.groupId}.${project.artifactId}</name>
   <properties>
     <spring-shell.version>3.2.4</spring-shell.version>
     <java.version>21</java.version>
@@ -32,6 +31,10 @@
     <dependency>
       <groupId>org.springframework.shell</groupId>
       <artifactId>spring-shell-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.shell</groupId>
+      <artifactId>spring-shell-test-autoconfigure</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -66,6 +69,18 @@
             <name>dashaun/${project.name}:v${project.version}-${os.detected.arch}</name>
           </image>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>io.spring.javaformat</groupId>
+        <artifactId>spring-javaformat-maven-plugin</artifactId>
+        <version>0.0.41</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>validate</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

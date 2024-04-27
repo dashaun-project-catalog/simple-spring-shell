@@ -2,12 +2,14 @@ package dev.dashaun.cli.simple;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.shell.command.annotation.CommandScan;
 
+@CommandScan
 @SpringBootApplication
-public class SimpleApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SimpleApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

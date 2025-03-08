@@ -13,11 +13,11 @@ import java.io.IOException;
 @Command
 public class GenerateCommand {
 
-	public static final String GENERATE_COMMAND = "generate";
+	static final String GENERATE_COMMAND = "generate";
 
-	public static final String GENERATE_INFO = "Generating file: ";
+	static final String GENERATE_INFO = "Generating file: ";
 
-	public static final String DEFAULT_FILE_NAME = "simple-spring-shell.txt";
+	static final String DEFAULT_FILE_NAME = "simple-spring-shell.txt";
 
 	private final Terminal terminal;
 

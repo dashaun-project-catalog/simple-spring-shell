@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.3.1</version>
+    <version>3.4.3</version>
     <relativePath></relativePath>
   </parent>
   <groupId>dev.dashaun.cli</groupId>
@@ -13,8 +13,8 @@
   <version>0</version>
   <name>${project.groupId}.${project.artifactId}</name>
   <properties>
-    <spring-shell.version>3.3.1</spring-shell.version>
-    <java.version>21</java.version>
+    <spring-shell.version>3.4.0</spring-shell.version>
+    <java.version>17</java.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -52,36 +52,6 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>build-info</id>
-            <goals>
-              <goal>build-info</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <image>
-            <builder>paketobuildpacks/builder-jammy-buildpackless-tiny</builder>
-            <buildpacks>
-              <buildpack>paketobuildpacks/java-native-image</buildpack>
-            </buildpacks>
-            <createdDate>now</createdDate>
-            <name>dashaun/${project.name}:v${project.version}-${os.detected.arch}</name>
-          </image>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>io.spring.javaformat</groupId>
-        <artifactId>spring-javaformat-maven-plugin</artifactId>
-        <version>0.0.41</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>validate</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>

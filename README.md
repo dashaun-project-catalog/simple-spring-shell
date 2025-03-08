@@ -9,7 +9,7 @@ It has a custom shell prompt and a single command to `generate` a new file.
 
 ## Prerequisites
 
-- Java 21
+- Java 17
 - GraalVM to generate the native CLI
 
 ## Quick Start

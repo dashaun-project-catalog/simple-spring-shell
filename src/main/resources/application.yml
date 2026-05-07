@@ -13,3 +13,5 @@ spring:
             enabled: 'false'
         script:
             enabled: 'false'
+    jackson:
+        use-jackson2-defaults: true
